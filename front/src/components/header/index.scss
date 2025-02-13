@@ -1,0 +1,25 @@
+#header {
+    margin: auto;
+    width: 90%;
+
+    .con {
+        display: flex;
+        .left{
+            width: 20%;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            .bar{
+                cursor: pointer;
+                padding: 0 16px;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .right{
+            width: 80%;
+        }
+    }
+}
