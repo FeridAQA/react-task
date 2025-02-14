@@ -1,0 +1,36 @@
+#product {
+    margin: auto;
+    width: 90%;
+    margin-top: 50px;
+
+    .up {
+        display: flex;
+        gap: 100px;
+        .con {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .red {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .btn {
+                    background-color: red;
+                    height: 40px;
+                    width: 20px;
+                    border-radius: 6px;
+                }
+
+                .text {
+                    color: red;
+                    font-weight: 700;
+                }
+                
+            }
+            .title{
+                font-size: 32px;
+                font-weight: 600;
+            }
+        }
+    }
+}

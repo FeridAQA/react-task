@@ -10,6 +10,7 @@ import './styles.css';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import axios from 'axios';
+import config from '../../config';
 
 export default function HeaderSwiper() {
     const [header, setHeader] = useState([]);
@@ -17,7 +18,7 @@ export default function HeaderSwiper() {
 
     const get_header = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/headers');
+            const res = await axios.get(`${config.BASE_URL}/headers`);
             console.log(res);
             setHeader(res.data);
         } catch (error) {
