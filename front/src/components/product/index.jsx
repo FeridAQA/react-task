@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.scss'
 import CountdownTimer from '../time'
+import ProductItem from '../product_item'
 const Product = () => {
     return (
         <div id='product'>
@@ -17,7 +18,7 @@ const Product = () => {
                 <CountdownTimer targetDate="2025-02-26T00:00:00"></CountdownTimer>
             </div>
             <div className="down">
-                
+                <ProductItem></ProductItem>
             </div>
         </div>
     )
