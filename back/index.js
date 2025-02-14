@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 const headerRoutes = require("./src/routes/header.routes");
 app.use("/headers", headerRoutes);
 
+
+const productRoutes = require("./src/routes/product.routes");
+app.use("/products", productRoutes);
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
