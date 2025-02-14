@@ -1,38 +1,64 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 import './styles.css';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
+
+import axios from 'axios';
 
 export default function HeaderSwiper() {
+    const [header, setHeader] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const get_header = async () => {
+        try {
+            const res = await axios.get('http://localhost:3000/headers');
+            console.log(res);
+            setHeader(res.data);
+        } catch (error) {
+            console.error("Xəta baş verdi:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        get_header();
+    }, []);
+
     return (
         <>
-            <Swiper
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
-            </Swiper>
-
+            {loading ? (
+                <>Loading...</>
+            ) : (
+                <Swiper
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Pagination, Autoplay]}
+                    className="mySwiper"
+                >
+                    {header.length > 0 ? (
+                        header.map((item) => (
+                            <SwiperSlide key={item._id}>
+                                <img src={item.src} alt="" />
+                            </SwiperSlide>
+                        ))
+                    ) : (
+                        <>data gəlmədi</>
+                    )}
+                </Swiper>
+            )}
         </>
     );
 }
