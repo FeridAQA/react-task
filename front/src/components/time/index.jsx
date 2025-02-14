@@ -29,24 +29,24 @@ const CountdownTimer = ({ targetDate }) => {
 
   return (
     <div style={{ textAlign: "center", fontFamily: "Arial, sans-serif" }}>
-      <div style={{ display: "flex", justifyContent: "center", fontSize: "24px" }}>
-        <div style={{ margin: "0 10px" }}>
-          <div>Days</div>
+      <div style={{ display: "flex", justifyContent: "center", fontSize: "24px", gap: "15px" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Days</div>
           <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.days).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red" }}>:</span>
-        <div style={{ margin: "0 10px" }}>
-          <div>Hours</div>
+        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Hours</div>
           <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.hours).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red" }}>:</span>
-        <div style={{ margin: "0 10px" }}>
-          <div>Minutes</div>
+        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Minutes</div>
           <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.minutes).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red" }}>:</span>
-        <div style={{ margin: "0 10px" }}>
-          <div>Seconds</div>
+        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Seconds</div>
           <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.seconds).padStart(2, "0")}</span>
         </div>
       </div>

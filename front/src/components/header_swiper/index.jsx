@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -35,7 +38,9 @@ export default function HeaderSwiper() {
     return (
         <>
             {loading ? (
-                <>Loading...</>
+                <div className='loading'><Box sx={{ display: 'flex' }}>
+                    <CircularProgress />
+                </Box></div>
             ) : (
                 <Swiper
                     spaceBetween={30}

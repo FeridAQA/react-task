@@ -13,7 +13,7 @@ const Header = () => {
                     <div className="bar">Home & Lifestyle</div>
                     <div className="bar">Medicine</div>
                     <div className="bar">Sports & Outdoor</div>
-                    <div className="bar">Baby’s & Toys</div>
+                    {/* <div className="bar">Baby’s & Toys</div> */}
                 </div>
                 <div className="right">
                     <HeaderSwiper></HeaderSwiper>
