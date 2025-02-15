@@ -29,8 +29,8 @@ function Navbar() {
               <input type="text" placeholder="What are you looking for?" />
               <SearchIcon className='sIcon' />
             </div>
-            <FavoriteBorderIcon />
-            <AddShoppingCartIcon />
+            <FavoriteBorderIcon className='d_icon' />
+            <AddShoppingCartIcon className='d_icon' />
           </div>
         </div>
       </div>

@@ -5,13 +5,27 @@
 
     .con {
         display: flex;
+        align-items: center;
 
         .left {
+            align-self: flex-start;
             margin-right: 30px;
             min-width: 260px;
             display: flex;
             flex-direction: column;
-            align-items: start;
+
+            // align-items: start;
+            // gap: 0px;
+            @media (max-width: 992px) {
+                font-size: 13px !important;
+                min-width: 0;
+                max-width: 200px;
+                margin-right: 10px;
+            }
+
+            @media (max-width: 740px) {
+                display: none;
+            }
 
             .bar {
                 cursor: pointer;
@@ -19,18 +33,29 @@
                 min-height: 48px;
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 992px) {
+                    min-height: 38px;
+                }
             }
         }
 
         .right {
-            flex: 1; // Qalan sahəni kapsasın
-            width: 100%; // ✅ İçindəki `Swiper` düzgün işləsin
+            align-self: flex-start;
+            flex: 1; 
+            width: 100%; 
             display: flex;
-            flex-basis: 0; // ✅ Accordion açılanda right-in genişliyi dəyişməsin
             min-width: 0;
             justify-content: center;
             // align-items: center;
             overflow: hidden;
+
+            @media (max-width: 740px) {
+                flex: auto;
+                width: 100%; // Parentin tam enini doldurmaq üçün
+                flex-grow: 1; // Bütün sahəni doldurmaq üçün
+            }
         }
+
     }
 }

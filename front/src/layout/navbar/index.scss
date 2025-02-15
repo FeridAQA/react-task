@@ -10,11 +10,23 @@
         align-items: center;
         padding: 0 20px;
         gap: 20px;
+        @media (max-width: 992px) {
+            gap: 10px;
+        }
+        .logo{
+            @media (max-width: 992px) {
+                font-size: 12px;
+            }
+        }
 
         .roots {
             display: flex;
             align-items: center;
             gap: 30px;
+            @media (max-width: 992px) {
+                gap: 15px;
+                font-size: 12px;
+            }
         }
 
         .active {
@@ -26,12 +38,20 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
-
+            
+            .d_icon{
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+            }
             .input {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
 
                 input{
                     all: unset;
@@ -39,10 +59,18 @@
                     min-width: 230px;
                     padding: 10px;
                     border-radius: 12px;
+                    @media (max-width: 992px) {
+                        min-width: 140px;
+                        gap: 15px;
+                        font-size: 10px;
+                    }
                 }
                 .sIcon{
                     position: absolute;
                     right: 5px;
+                    @media (max-width: 992px) {
+                        font-size: 18px;
+                    }
                 }
             }
         }
