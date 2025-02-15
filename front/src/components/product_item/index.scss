@@ -20,7 +20,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-gap: 10px;
+    gap: 10px;
+
     .discount {
         position: absolute;
         top: 20px;
@@ -54,12 +55,13 @@ gap: 10px;
         border-radius: 50%;
     }
 
-    .title{
+    .title {
         padding-top: 20px;
         align-self: flex-start;
         font-weight: 500;
     }
-    .oo{
+
+    .oo {
         align-self: flex-start;
         display: flex;
         flex-direction: row;
@@ -67,6 +69,7 @@ gap: 10px;
         gap: 10px;
         color: gray;
     }
+
     .add {
         cursor: pointer;
         bottom: 0;
@@ -82,14 +85,16 @@ gap: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        p{
+
+        p {
             visibility: hidden;
         }
     }
 
     &:hover .add {
         height: 52px;
-        p{
+
+        p {
             transition-duration: 0.3s;
             visibility: visible;
         }
@@ -103,7 +108,7 @@ gap: 10px;
     border-radius: 12px;
     position: relative;
 
-   
+
 
 }
 
@@ -147,16 +152,33 @@ gap: 10px;
     z-index: 10;
     font-size: 20px;
     transition: background 0.3s;
+
+    @media (max-width: 740px) {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
 }
 
 .custom-prev {
-    top: -20px;
+    top: -50px;
     right: 70px;
+
+    @media (max-width: 740px) {
+        right: 50px;
+    }
+    @media (max-width: 600px) {
+        top: 0px;
+    }
 }
 
 .custom-next {
-    top: -20px;
+    top: -50px;
     right: 10px;
+    @media (max-width: 600px) {
+        top: 0px;
+    }
 }
 
 .custom-prev:hover,

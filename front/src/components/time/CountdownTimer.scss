@@ -1,0 +1,74 @@
+.countdown-container {
+    text-align: center;
+    font-family: "Arial, sans-serif";
+  
+    .timer-box {
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      gap: 15px;
+  
+      .time-unit {
+        text-align: center;
+  
+        .label {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+  
+        .value {
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+  
+      .separator {
+        font-size: 40px;
+        color: red;
+        align-self: center;
+      }
+    }
+  
+    // ✅ 992px-dən sonra kiçiltmə
+    @media (max-width: 992px) {
+      .timer-box {
+        font-size: 18px; // Ümumi ölçü kiçilir
+        gap: 10px;
+        
+        .time-unit {
+          .label {
+            font-size: 12px;
+          }
+          .value {
+            font-size: 30px;
+          }
+        }
+  
+        .separator {
+          font-size: 30px;
+        }
+      }
+    }
+  
+    // ✅ 768px və daha kiçik ekranlar üçün
+    @media (max-width: 768px) {
+      .timer-box {
+        font-size: 16px;
+        gap: 8px;
+        
+        .time-unit {
+          .label {
+            font-size: 10px;
+          }
+          .value {
+            font-size: 24px;
+          }
+        }
+  
+        .separator {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  

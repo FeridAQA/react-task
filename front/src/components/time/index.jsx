@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./CountdownTimer.scss"; // Yeni SCSS faylını əlavə et
 
 const CountdownTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -28,26 +29,26 @@ const CountdownTimer = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Arial, sans-serif" }}>
-      <div style={{ display: "flex", justifyContent: "center", fontSize: "24px", gap: "15px" }}>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Days</div>
-          <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.days).padStart(2, "0")}</span>
+    <div className="countdown-container">
+      <div className="timer-box">
+        <div className="time-unit">
+          <div className="label">Days</div>
+          <span className="value">{String(timeLeft.days).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Hours</div>
-          <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.hours).padStart(2, "0")}</span>
+        <span className="separator">:</span>
+        <div className="time-unit">
+          <div className="label">Hours</div>
+          <span className="value">{String(timeLeft.hours).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Minutes</div>
-          <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.minutes).padStart(2, "0")}</span>
+        <span className="separator">:</span>
+        <div className="time-unit">
+          <div className="label">Minutes</div>
+          <span className="value">{String(timeLeft.minutes).padStart(2, "0")}</span>
         </div>
-        <span style={{ fontSize: "40px", color: "red", alignSelf: "center" }}>:</span>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "16px", marginBottom: "5px" }}>Seconds</div>
-          <span style={{ fontSize: "40px", fontWeight: "bold" }}>{String(timeLeft.seconds).padStart(2, "0")}</span>
+        <span className="separator">:</span>
+        <div className="time-unit">
+          <div className="label">Seconds</div>
+          <span className="value">{String(timeLeft.seconds).padStart(2, "0")}</span>
         </div>
       </div>
     </div>

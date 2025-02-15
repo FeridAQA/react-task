@@ -7,7 +7,10 @@
     .up {
         display: flex;
         gap: 100px;
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
+        @media (max-width: 992px) {
+            gap: 50px;
+        }
 
         .con {
             display: flex;
@@ -24,11 +27,22 @@
                     height: 40px;
                     width: 20px;
                     border-radius: 6px;
+
+                    @media (max-width: 992px) {
+                        height: 30px;
+                        width: 10px;
+                        border-radius: 3px;
+                    }
                 }
 
                 .text {
                     color: red;
                     font-weight: 700;
+
+                    @media (max-width: 992px) {
+                        font-size: 16px;
+                        // font-weight: 500;
+                    }
                 }
 
             }
@@ -36,6 +50,14 @@
             .title {
                 font-size: 32px;
                 font-weight: 600;
+
+                @media (max-width: 992px) {
+                    font-size: 26px;
+                    font-weight: 600;
+                }
+                @media (max-width: 462px) {
+                    font-size: 20px;
+                } 
             }
         }
 
@@ -43,7 +65,11 @@
             align-self: self-end;
         }
     }
-
+    .down{
+        @media (max-width: 992px) {
+            margin-top: 20px;
+        } 
+    }
     .viewbtn {
         padding-top: 30px;
         cursor: pointer;
