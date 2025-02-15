@@ -7,7 +7,9 @@ import GppGoodIcon from '@mui/icons-material/GppGood';
 
 const Icons_sec = () => {
     return (
+        
         <div id='icons_sec'>
+            <div className="line"></div>
             <div className="con">
                 <div className="bigbox">
                     <div className="up">
