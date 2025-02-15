@@ -22,7 +22,7 @@ function Navbar() {
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
-            <NavLink to='/singin'>Sing Up</NavLink>
+            <NavLink to='/register'>Sing Up</NavLink>
           </div>
           <div className="icons">
             <div className="input">

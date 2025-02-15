@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Error from './pages/error';
 import About from './pages/about';
 import Contact from './pages/contact';
+import Signup from './pages/register';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
               <Route element={<Home></Home>}  index ></Route>
               <Route element={<About></About>}  path='about' ></Route>
               <Route element={<Contact></Contact>}  path='contact' ></Route>
-              {/* <Route element={<Register></Register>}  path='/register' ></Route> */}
+              <Route element={<Signup></Signup>}  path='/register' ></Route>
               {/* <Route element={<Login></Login>}  path='/login' ></Route> */}
               {/* <Route element={<Detail></Detail>}  path='/detail/:id' ></Route> */}
 
