@@ -15,11 +15,14 @@ const Product = () => {
                         Flash Sales
                     </div>
                 </div>
+                <div className="time">
                 <CountdownTimer targetDate="2025-02-26T00:00:00"></CountdownTimer>
+                </div>
             </div>
             <div className="down">
                 <ProductItem></ProductItem>
             </div>
+            <div className="viewbtn">View All Products</div>
         </div>
     )
 }

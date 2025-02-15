@@ -1,0 +1,128 @@
+.footer {
+    background: black;
+    color: white;
+    padding: 50px 20px;
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                font-size: 14px;
+                color: #bbb;
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .subscribe-box {
+            display: flex;
+            align-items: center;
+            // background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: black;
+            
+            @media (max-width: 480px) {
+            align-self: center;
+
+            }
+            input {
+                flex: 1;
+                border: none;
+                padding: 10px;
+                outline: none;
+                background-color: black;
+                color: white;
+                max-width: 300px;
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .app-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .qr-code {
+                width: 60px;
+                height: 60px;
+            }
+
+            .store-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+
+            svg {
+                transition: color 0.3s;
+
+                &:hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+}

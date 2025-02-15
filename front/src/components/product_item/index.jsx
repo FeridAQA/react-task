@@ -8,6 +8,9 @@ import 'swiper/css/navigation';
 import './index.scss';
 import config from '../../config';
 
+
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import { Box, CircularProgress } from '@mui/material';
@@ -61,7 +64,7 @@ const ProductSwiper = () => {
                             <SwiperSlide key={product._id} className="product-card">
                                 <div className="imgbox">
                                     <img src={product.src} alt={product.title} />
-                                <div className="add"><p>Add To Cart</p></div>
+                                    <div className="add"><p>Add To Cart</p></div>
                                 </div>
                                 <p className='discount'>- {product.discount}%</p>
                                 <div className="heart">
@@ -75,7 +78,18 @@ const ProductSwiper = () => {
                                     <span className="current-price">${product.price1}</span>
                                     <span className="old-price">${product.price2}</span>
                                 </p>
-                                
+                                <div className="oo">
+                                    <Box sx={{ '& > legend': { mt: 2 } }}>
+                                        <Rating
+                                            name="simple-controlled"
+                                            value={product.rating}
+                                            onChange={(event, newValue) => {
+                                                setValue(newValue);
+                                            }}
+                                        />
+                                    </Box>
+                                    <div className="comment">({product.comment})</div>
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
