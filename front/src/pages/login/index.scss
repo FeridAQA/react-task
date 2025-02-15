@@ -1,0 +1,104 @@
+#login {
+    max-width: 400px;
+    margin: 100px auto;
+
+    .signup-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .btndiv{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .create-btn {
+                background-color: #d32f2f;
+                color: white;
+                transition: background 0.3s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: #b71c1c;
+                }
+            }
+            .forgot{
+                font-size: 15px;
+                color: red;
+                cursor: pointer;
+                padding: 20px;
+            }
+        }
+        h2 {
+            // align-self: flex-start;
+            font-size: 30px;
+            font-weight: 500;
+
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                width: 100%;
+                padding: 12px;
+                border: 0px solid #ccc;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+
+
+
+                border-bottom: 2px solid #333; // Fokuslandıqda rəng dəyişir
+
+            }
+
+            button {
+                // width: 100%;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            
+
+
+        }
+
+        .login-link {
+            margin-top: 30px;
+            font-size: 14px;
+
+            a {
+                color: black;
+                font-weight: bold;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #d32f2f;
+                }
+            }
+        }
+    }
+}
+
+.MuiSnackbar-root {
+    top: 100px !important; // Snackbar-ı yuxarı çək
+}

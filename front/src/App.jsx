@@ -7,6 +7,7 @@ import Error from './pages/error';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Signup from './pages/register';
+import Login from './pages/login';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
               <Route element={<About></About>}  path='about' ></Route>
               <Route element={<Contact></Contact>}  path='contact' ></Route>
               <Route element={<Signup></Signup>}  path='/register' ></Route>
-              {/* <Route element={<Login></Login>}  path='/login' ></Route> */}
+              <Route element={<Login></Login>}  path='/login' ></Route>
               {/* <Route element={<Detail></Detail>}  path='/detail/:id' ></Route> */}
 
             </Route>

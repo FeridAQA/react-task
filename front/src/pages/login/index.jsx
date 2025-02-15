@@ -5,7 +5,7 @@ import { Snackbar, Alert } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./index.scss";
 
-const Signup = () => {
+const Login = () => {
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
     const validationSchema = Yup.object({
@@ -30,23 +30,13 @@ const Signup = () => {
     });
 
     return (
-        <div id="sing">
+        <div id="login">
             <div className="signup-container">
-                <h2>Create an account</h2>
+                <h2>Log in to Exclusive</h2>
                 <p>Enter your details below</p>
 
                 {/* Form */}
                 <form onSubmit={formik.handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={formik.values.name}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                    />
-                    {formik.touched.name && formik.errors.name && <p className="error">{formik.errors.name}</p>}
-
                     <input
                         type="email"
                         name="email"
@@ -67,16 +57,15 @@ const Signup = () => {
                     />
                     {formik.touched.password && formik.errors.password && <p className="error">{formik.errors.password}</p>}
 
-                    <button type="submit" className="create-btn">Create Account</button>
+                    <div className="btndiv">
+                        <button type="submit" className="create-btn">Log In</button>
+                        <div className="forgot">Forget Password?</div>
+                    </div>
                 </form>
 
-                {/* Login linki */}
-                <p className="login-link">
-                    Already have an account? <Link to="/login">Log in</Link>
-                </p>
+
             </div>
 
-            {/* Snackbar bildirişi */}
             <Snackbar
                 open={openSnackbar}
                 autoHideDuration={3000}
@@ -84,11 +73,11 @@ const Signup = () => {
                 anchorOrigin={{ vertical: "top", horizontal: "right" }}
             >
                 <Alert onClose={() => setOpenSnackbar(false)} severity="success" sx={{ width: "100%" }}>
-                    Qeydiyyat uğurla tamamlandı!
+                    Login olundu
                 </Alert>
             </Snackbar>
         </div>
     );
 };
 
-export default Signup;
+export default Login;
