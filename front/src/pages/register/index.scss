@@ -1,6 +1,9 @@
 #sing {
     max-width: 330px;
     margin: 100px auto;
+    @media (max-width: 992px) {
+        margin: 20px auto;
+    }
 
     .signup-container {
         display: flex;

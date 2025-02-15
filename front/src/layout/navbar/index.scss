@@ -1,84 +1,162 @@
-#navbar {
-    margin: auto;
-    width: 90%;
+#big_nav {
+    height: 73px;
 
-    .con {
-        height: 72px;
+    .nav_pos {
+        position: fixed;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        gap: 20px;
-        @media (max-width: 992px) {
-            gap: 10px;
-        }
-        .logo{
-            @media (max-width: 992px) {
-                font-size: 12px;
-            }
-        }
+        z-index: 11;
+        background-color: white;
 
-        .roots {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            @media (max-width: 992px) {
-                gap: 15px;
-                font-size: 12px;
-            }
-        }
 
-        .active {
-            text-decoration: underline;
-        }
+        .for_mob_nav {
+            position: relative;
 
-        .icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            
-            .d_icon{
-                @media (max-width: 992px) {
-                    font-size: 18px;
-                }
-            }
-            .input {
+            .nav_roots {
+                position: absolute;
+                width: 100%;
+                top: 73px;
+                left: 0;
+                background: white;
+                padding: 0px 10px 0px 60px;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                z-index: 11;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            }
+
+            .nav_roots.open {
+                height: 140px;
+                padding: 10px 10px 0px 60px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+            }
+            .active {
+                text-decoration: underline;
+            }
+        }
+
+        #navbar {
+            margin: auto;
+            width: 90%;
+
+            .con {
+                height: 72px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
-                position: relative;
+                padding: 0 20px;
+                gap: 20px;
+
+
                 @media (max-width: 992px) {
-                    font-size: 18px;
+                    gap: 10px;
                 }
 
-                input{
-                    all: unset;
-                    background-color: #F5F5F5;
-                    min-width: 230px;
-                    padding: 10px;
-                    border-radius: 12px;
+
+
+                .logo {
                     @media (max-width: 992px) {
-                        min-width: 140px;
-                        gap: 15px;
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                 }
-                .sIcon{
-                    position: absolute;
-                    right: 5px;
+
+                .mobil_nav {
+                    position: relative;
+                    display: none;
+
+                    .mobil_btn {
+                        color: black;
+                        font-size: 30px;
+                    }
+
+                    @media (max-width: 740px) {
+                        display: block;
+                    }
+
+
+                }
+
+                .roots {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+
                     @media (max-width: 992px) {
-                        font-size: 18px;
+                        gap: 15px;
+                        font-size: 12px;
+                    }
+
+                    @media (max-width: 740px) {
+                        display: none;
+                    }
+                }
+
+                .active {
+                    text-decoration: underline;
+                }
+
+                .icons {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    @media (max-width: 740px) {
+                        display: none;
+                    }
+
+                    .d_icon {
+                        @media (max-width: 992px) {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .input {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        @media (max-width: 992px) {
+                            font-size: 18px;
+                        }
+
+                        input {
+                            all: unset;
+                            background-color: #F5F5F5;
+                            min-width: 230px;
+                            padding: 10px;
+                            border-radius: 12px;
+
+                            @media (max-width: 992px) {
+                                min-width: 140px;
+                                gap: 15px;
+                                font-size: 10px;
+                            }
+                        }
+
+                        .sIcon {
+                            position: absolute;
+                            right: 5px;
+
+                            @media (max-width: 992px) {
+                                font-size: 18px;
+                            }
+                        }
                     }
                 }
             }
+
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: gray;
         }
     }
-
-}
-.line{
-    width: 100%;
-    height: 1px;
-    background-color: gray;
 }
